@@ -2,13 +2,13 @@
     <div class="position-sticky pt-3 sidebar-sticky scroll--simple">
         <ul class="nav flex-column mt-4">
             <li class="nav-item">
-                <a class="nav-link position-relative" href="#">
+                <a class="nav-link position-relative" href="{{ route('dashboard') }}">
                     <em class="bi bi-speedometer"></em>
                     Dashboard
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link position-relative" href="#">
+                <a class="nav-link position-relative" href="{{ route('applicants.show') }}">
                     <em class="bi bi-person-lines-fill"></em>
                     Applicants
                 </a>
@@ -17,19 +17,19 @@
         <hr />
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link position-relative" href="#">
+                <a class="nav-link position-relative" href="{{ route('vacancies.show') }}">
                     <em class="bi bi-list-task"></em>
                     Vacancy
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link position-relative" href="#">
+                <a class="nav-link position-relative" href="{{ route('applicant-status.show') }}">
                     <em class="bi bi-tags-fill"></em>
                     Status
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link position-relative" href="#">
+                <a class="nav-link position-relative" href="{{ route('user.index') }}">
                     <em class="bi bi-people-fill"></em>
                     Users
                 </a>

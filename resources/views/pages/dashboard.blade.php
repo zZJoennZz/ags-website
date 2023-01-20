@@ -40,4 +40,4 @@
     </div>
 </div>
 <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
-@include('components/foot')
+@include('components/admin_foot')

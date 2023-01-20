@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('middle_name');
             $table->string('last_name');
             $table->integer('gender');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('contact_number');
             $table->string('address');
             $table->string('cover_letter');

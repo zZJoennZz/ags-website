@@ -3,10 +3,10 @@
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
-                    <a href="index.html" class="logo"><img src="img/logo-ft.png" alt="" width="100%"></a>
+                    <a href="{{ route('home') }}" class="logo"><img src="img/logo-ft.png" alt="" width="100%"></a>
                     <ul class="nav">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../About.html">About us</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('about') }}">About us</a></li>
                         <li><a href="#apply">Agent Job</a></li>
                         <li><a href="../Contact/contact us.html">Contact Us</a></li>
                     </ul>
