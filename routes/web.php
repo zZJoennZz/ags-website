@@ -29,6 +29,31 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('pages/about');
 })->name('about');
+Route::get('/agent-job', function () {
+    return view('pages/agent_job');
+})->name('agent.job');
+Route::get('/start-chat', function () {
+    return view('pages/chat_start');
+})->name('chat.home');
+Route::get('/chat', function () {
+    return view('pages/chat');
+})->name('chat.start');
+Route::get('/contact', function () {
+    return view('pages/contact');
+})->name('contact.show');
+Route::get('/course-one', function () {
+    return view('pages/course-one');
+})->name('course.one');
+Route::get('/course-two', function () {
+    return view('pages/course-two');
+})->name('course.two');
+Route::get('/course-three', function () {
+    return view('pages/course-three');
+})->name('course.three');
+
+Route::get('/foo', function () {
+    Artisan::call('storage:link');
+});
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', function () {

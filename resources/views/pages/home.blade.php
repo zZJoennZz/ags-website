@@ -9,7 +9,7 @@
             <h2><em>MULTIPLE</em><span> JOB</span> OPENINGS AWAIT!</h2>
             <p>Unlock thousands of BPO and Tech positions with one chat interview..</p>
             <div class="primary-white-button">
-                <a href="Chat/front page-chat.html">Chat Interview</a>
+                <a href="{{ route('chat.home') }}">Chat Interview</a>
             </div>
         </div>
     </div>
@@ -80,8 +80,8 @@
                     <div class="section-heading">
                         <h4>Job Vacancies</h4>
                         <div class="line-dec"></div>
-                        <p>We have hundreds of job vacancies waiting to be filled. If you’re ready to start your career journey with Alphalink Global Solutions today, feel free to check our current openings and apply now. </p>
-                        <a href=""><button>APPLY NOW!</button></a>
+                        <p>We have hundreds of job vacancies waiting to be filled. If you're ready to start your career journey with Alphalink Global Solutions today, feel free to check our current openings and apply now. </p>
+                        <a href="{{ route('agent.job') }}"><button>APPLY NOW!</button></a>
 
                     </div>
                 </div>
@@ -176,7 +176,7 @@
                                     If you work in customer service or own a business, you will occasionally need to take calls from irate customers. The way you handle these calls can determine the quality of reviews you receive and the success of your business.
 
                                     So, take a look at this article and see the things you can do when handling irate customers.</p>
-                                <a href="Courses/courses-one.html" button class="w3-btn w3-black">Continue Reading</a>
+                                <a href="{{route('course.one')}}" button class="w3-btn w3-black">Continue Reading</a>
                             </div>
                         </div>
                         <div id="tab3">
@@ -188,7 +188,7 @@
                                     These calls are important to the customer service process, and call center agents are on the frontlines. After all, you are the first-person customers turn to get their questions answered and their problems solved. And, according to the study, 63% of customers agree that resolving an issue quickly or at first contact is the most important element of a good customer experience.
 
                                     In this article, we will give you seven skills you need to possess as a call center agent to provide excellent customer service and impress bosses both present and future.</p>
-                                <a href="Courses/courses-two.html" button class="w3-btn w3-black">Continue Reading</a>
+                                <a href="{{route('course.two')}}" button class="w3-btn w3-black">Continue Reading</a>
                             </div>
                         </div>
                         <div id="tab4">
@@ -196,7 +196,7 @@
                             <div class="text-content">
 
                                 <p>Benjamin Franklin once said “By failing to prepare you are preparing to fail”. This also applies when you are applying for a job. How well you are prepared for your exams and interviews will determine the outcome of your job application. Here are 6 things you should be doing the day before your scheduled application.</p>
-                                <a href="Courses/courses-three.html" button class="w3-btn w3-black">Continue Reading</a>
+                                <a href="{{route('course.three')}}" button class="w3-btn w3-black">Continue Reading</a>
                             </div>
                         </div>
                     </section>
