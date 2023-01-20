@@ -1,5 +1,7 @@
 @include('components/admin_head', ['page_title' => 'Job Vacancies | Alphalink Global Solutions'])
 @include('components/admin_header')
+<script type="text/javascript" src="{{asset('js/jquery-te-1.4.0.min.js')}}" charset="utf-8"></script>
+<link type="text/css" rel="stylesheet" href="{{asset('css/jquery-te-1.4.0.css')}}">
 <div class="container-fluid">
     <div class="row">
         @include('components/admin_sidebar')
@@ -29,7 +31,9 @@
                                         <td>
                                             <div class="fs-4 fw-bold">{{$vacancy->position_name}}</div>
                                             <div class="fst-italic small">
-                                                {{$vacancy->description}}
+                                                <p style="max-width: 250px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+                                                    {!! $vacancy->description !!}
+                                                </p>
                                             </div>
                                         </td>
                                         <td>{{$vacancy->availability}}</td>
@@ -90,7 +94,7 @@
 
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" id="description"></textarea>
+                    <textarea id="description" name="description" class="jqte-test"></textarea>
                 </div>
             </div>
             <div class="modal-footer">
@@ -122,8 +126,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" name="view_description" id="view_description" readonly></textarea>
+                <div><label for="description" class="form-label">Description</label></div>
+                <span id="view_description"></span>
             </div>
         </div>
         <div class="modal-footer">
@@ -158,7 +162,7 @@
     
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" id="edit_description"></textarea>
+                    <textarea id="edit_description" name="description" class="jqte-test"></textarea>
                 </div>
     
                 <div class="mb-3">
@@ -205,7 +209,8 @@ $(document).ready( function () {
         await fetch(`{{ route('vacancy-single-api.show') }}/${vacancy_id}`).then(res => res.json()).then(res => {
             position_name.value = res.data.position_name;
             availability.value = res.data.availability;
-            description.value = res.data.description;
+            // description.value = res.data.description;
+            $("#view_description").html(res.data.description);
         }).then(res => {
             $('#viewVacancy').modal('toggle');
         });
@@ -219,7 +224,8 @@ $(document).ready( function () {
         await fetch(`{{ route('vacancy-single-api.show') }}/${vacancy_id}`).then(res => res.json()).then(res => {
             position_name.value = res.data.position_name;
             availability.value = res.data.availability;
-            description.value = res.data.description;
+            // description.value = res.data.description;
+            $("#edit_description").jqteVal(res.data.description);
             vac_id.value = vacancy_id;
             if (res.data.is_active) {
                 $('#edit_is_active').attr('checked', true);
@@ -228,5 +234,16 @@ $(document).ready( function () {
             $('#editVacancy').modal('toggle');
         });
     }
+</script>
+<script>
+	$('.jqte-test').jqte();
+	
+	// settings of status
+	var jqteStatus = true;
+	$(".status").click(function()
+	{
+		jqteStatus = jqteStatus ? false : true;
+		$('.jqte-test').jqte({"status" : jqteStatus})
+	});
 </script>
 @include('components/admin_foot')

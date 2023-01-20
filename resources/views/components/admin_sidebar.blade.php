@@ -37,6 +37,15 @@
         </ul>
         <hr />
         <ul class="nav flex-column">
+            <li class="nav-item">
+                <a href="{{ route('settings.index') }}" class="nav-link position-relative">
+                    <em class="bi bi-gear-fill"></em>
+                    Settings
+                </a>
+            </li>
+        </ul>
+        <hr />
+        <ul class="nav flex-column">
             <li class="nav-link">
                 <div class="mb-3 mb-md-0 small text-muted">
                     Copyright © {{ date("Y") }}.

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('position_name');
             $table->integer('availability');
-            $table->string('description');
+            $table->longText('description');
             $table->boolean('is_active')->default(1);
             $table->boolean('is_delete')->default(0);
             $table->unsignedBigInteger('added_by');

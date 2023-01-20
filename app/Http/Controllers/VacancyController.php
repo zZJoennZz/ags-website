@@ -21,7 +21,7 @@ class VacancyController extends Controller
         $request->validate([
             'position_name' => 'required|min:2|max:100',
             'availability' => 'required|numeric',
-            'description' => 'required|min:1|max:255',
+            'description' => 'required|min:1',
         ]);
         DB::beginTransaction();
         try {
@@ -45,7 +45,7 @@ class VacancyController extends Controller
         $request->validate([
             'position_name' => 'required|min:2|max:100',
             'availability' => 'required|numeric',
-            'description' => 'required|min:1|max:255',
+            'description' => 'required|min:1',
         ]);
         // return $request->all();
         DB::beginTransaction();

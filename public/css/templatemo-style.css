@@ -607,6 +607,9 @@ header
 }
 
 @media (max-width: 767px) {
+    .services .item {
+        margin-bottom: 30px;
+    }
     .header-area .main-nav .logo {
         color: #1e1e1e;
     }
@@ -1452,7 +1455,7 @@ footer .connect-us ul li a:hover {
 
 .main-banner .caption {
     position: absolute;
-    padding-top: 50%;
+    padding-top: 30%;
 }
 
 .main-banner .caption h6 {
@@ -1510,7 +1513,6 @@ services
 
 .services {
     margin-top: -235px;
-    position: absolute;
     width: 100%;
 }
 

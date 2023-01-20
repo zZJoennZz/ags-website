@@ -1,5 +1,11 @@
 @include('components/head', ['page_title' => 'Agent Job | Alphalink Global Solutions'])
 @include('components/menu')
+<style>
+ul {
+	list-style: circle !important;
+	list-style-position: inside !important;
+}
+</style>
 <section class="bg-success">
     <div class="container">
         <div class="row">
@@ -19,7 +25,7 @@
                         <div style="padding-bottom: 0; padding-top: 0; float: right; font-size: 4rem;"><i class="fa fa-cogs" aria-hidden="true"></i></div>
                         <h2 style="font-weight: bold;">{{$vacancy->position_name}}</h2>
                         {{-- <p style="max-width: 250px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{$vacancy->description}}</p> --}}
-                        <p style="">{{$vacancy->description}}</p>
+                        <p>{!! $vacancy->description !!}</p>
                         <a href="{{ route('chat.home') }}" class="btn btn-danger" style="width: 100%;">Apply Now!</a>
                     </div>
                 </div>

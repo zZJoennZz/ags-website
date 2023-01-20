@@ -7,6 +7,7 @@ use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,6 +85,9 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::post('/status', [StatusController::class, 'store'])->name('applicant-status.add');
     Route::put('/status', [StatusController::class, 'update'])->name('applicant-status.update');
     Route::delete('/status/{status_id?}', [StatusController::class, 'delete'])->name('applicant-status.delete');
+
+    Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
+    Route::put('/settings', [SettingController::class, 'update'])->name('settings.update');
 });
 
 Route::middleware('admin')->prefix('admin')->group(function () {
